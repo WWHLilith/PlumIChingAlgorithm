@@ -1,7 +1,5 @@
 import math
 from enum import Enum, unique
-# import cnlunar
-# import datetime
 import json
 
 
@@ -501,7 +499,7 @@ sixty_four_diagrams_info = {
         eDiagram=ESixtyFourDiagrams.Xun_Kan,
     ),
     ESixtyFourDiagrams.Dui_Gen: SixtyFourDiagramInfo(
-        name="泽山困",
+        name="泽山咸",
         statement="亨，小畜之志。",
         meaning="困境",
         description="困卦象征困境，提醒应对困难和挫折。",
@@ -844,7 +842,7 @@ sixty_four_diagrams_info = {
         eDiagram=ESixtyFourDiagrams.Xun_Zhen,
     ),
     ESixtyFourDiagrams.Dui_Kun: SixtyFourDiagramInfo(
-        name="泽地困",
+        name="泽地萃",
         statement="亨，利贞。",
         meaning="困扰",
         description="困卦象征困扰与局限，提醒人们在面对困境时要保持清醒和冷静。",
@@ -1015,9 +1013,10 @@ def isDiagramsEmpty(diagram, emptyList):
 #根据用的属性和全局属性看喜用
 def handleElement(ti_info: ElementInfo, global_element):
     ti_element = ti_info.element
+    sheng_wo_element = element_info[ti_element].who_generate_me
     count = 0
     for i in global_element:
-        if i == ti_element:
+        if i == ti_element or i == sheng_wo_element:
             count += 1
 
     xi = []
@@ -1195,6 +1194,6 @@ def main(number1: int, number2: int, time_shi: int, json_str: str) -> dict:
 
     return result
 
-json_str = "{\"公历日期\":\"2024年11月12日 星期二\",\"农历日期\":\"农历二零二四年 十月(大) 十二\",\"黄历日期\":\"阳历2024年11月12日，甲辰年阴历十月十二日\",\"回历日期\":\"伊斯兰历1446年5月10日\",\"干支日期\":\"甲辰年 乙亥月 庚辰日\",\"五行纳音\":\"白腊金\",\"值日星神\":\"司命（吉星）\",\"宜\":\"开光、解除、拆卸、翻新 修造、动土、安床、纳畜、安葬、启钻、入殓、\",\"忌\":\"结婚 嫁娶 开业 开幕 开市 出火 栽种 破土 动土 搬迁新宅 乔迁新居 入宅 搬家 移徙 安香 分家 分居 掘井 作灶\"}"
-
-main(1, 1, 10, json_str)
+# json_str = "{\"公历日期\":\"2024年11月12日 星期二\",\"农历日期\":\"农历二零二四年 十月(大) 十二\",\"黄历日期\":\"阳历2024年11月12日，甲辰年阴历十月十二日\",\"回历日期\":\"伊斯兰历1446年5月10日\",\"干支日期\":\"甲辰年 乙亥月 庚辰日\",\"五行纳音\":\"白腊金\",\"值日星神\":\"司命（吉星）\",\"宜\":\"开光、解除、拆卸、翻新 修造、动土、安床、纳畜、安葬、启钻、入殓、\",\"忌\":\"结婚 嫁娶 开业 开幕 开市 出火 栽种 破土 动土 搬迁新宅 乔迁新居 入宅 搬家 移徙 安香 分家 分居 掘井 作灶\"}"
+#
+# main(1, 1, 10, json_str)
