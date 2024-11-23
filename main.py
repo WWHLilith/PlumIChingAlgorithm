@@ -397,7 +397,7 @@ class ESixtyFourDiagrams(Enum):
     Gen_Dui = combineDiagrams(EDiagrams.Gen, EDiagrams.Dui)  # 山泽损
     Xun_Zhen = combineDiagrams(EDiagrams.Xun, EDiagrams.Zhen)  # 风雷益
     Dui_Qian = combineDiagrams(EDiagrams.Dui, EDiagrams.Qian)  # 泽天夬
-    Qian_Xun = combineDiagrams(EDiagrams.Qian, EDiagrams.Xun)  # 天风垢
+    Qian_Xun = combineDiagrams(EDiagrams.Qian, EDiagrams.Xun)  # 天风姤
     Dui_Kun = combineDiagrams(EDiagrams.Dui, EDiagrams.Kun)  # 泽地萃
     Kun_Xun = combineDiagrams(EDiagrams.Kun, EDiagrams.Xun)  # 地风升
     Dui_Kan = combineDiagrams(EDiagrams.Dui, EDiagrams.Kan)  # 泽水困
@@ -646,7 +646,7 @@ sixty_four_diagrams_info = {
         eDiagram=ESixtyFourDiagrams.Dui_Xun,
     ),
     ESixtyFourDiagrams.Qian_Xun: SixtyFourDiagramInfo(
-        name="天风垢",
+        name="天风姤",
         statement="亨，利见大人。",
         meaning="随和",
         description="随卦象征随和，代表适应变化与接受。",
